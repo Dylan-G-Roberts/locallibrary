@@ -9,11 +9,11 @@ class AuthorAdmin(admin.ModelAdmin):
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
-    
+
 @admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    pass
-
+    list_filter = ('status', 'due_back')
+    
 # admin.site.register(Author, AuthorAdmin)
 # admin.site.register(Book)
 # admin.site.register(BookInstance)
